@@ -166,27 +166,17 @@ h3 {
     border: none; 
     background: transparent; 
     padding-left: 25px; 
-    box-shadow: none; 
+    outline: none; 
 }
 
-#up-arrow {
-    width: 10px; 
-    height: 10px; 
-    background: #00aeff; 
-    position: absolute;
-    right: 30px; 
-    top: 28px; 
-    transform: rotateZ(45deg);
-    cursor: pointer; 
+.custom-select-jq select:focus {
+    outline: none; 
 }
 
-#up-arrow .cover {
-    width: 13px; 
-    height: 13px; 
-    background: #fff;
-    position: relative; 
-    top: -10px; 
-    transform: rotateZ(-45deg) translateX(-7px) translateY(-2px);
+#options {
+    padding-left: 30px; 
+    padding-top: 15px; 
+    padding-bottom: 15px; 
 }
 
 #jq-options {
@@ -208,6 +198,7 @@ h3 {
     padding-bottom: 13px; 
     cursor: pointer; 
     padding-left: 30px; 
+    border: none; 
 }
 
 #jq-options li:last-child {
