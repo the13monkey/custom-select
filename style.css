@@ -150,7 +150,7 @@ h3 {
     position: relative;
     width: 400px; 
     border: 2px solid #00aeff; 
-    border-radius: 50px; 
+    border-radius: 25px; 
     padding-top: 10px; 
     padding-bottom: 10px; 
     margin-top: -300px; 
@@ -224,6 +224,10 @@ select {
 /* For IE10 */
 select::-ms-expand {
   display: none;
+}
+
+.jq-selected {
+    background-color: #00aeff; 
 }
 
 
