@@ -3,10 +3,9 @@ $( document ).ready(function() {
     $('#jq-options').addClass('select-hide')
     $('.custom-select-jq select').hide();
     $('.custom-select-jq').append("<div id='options'></div>");
-    var defaultText = "Select an option below:";
+    var defaultText = "jQuery &lt;select&gt; element";
     $('#options').html(defaultText);
-    $('.custom-select-jq').click(function(e){
-        e.stopPropagation();
+    $('.custom-select-jq').click(function(){
         $(this).toggleClass('select-half');
         $('#jq-options').toggleClass('select-hide');
     });
@@ -16,10 +15,14 @@ $( document ).ready(function() {
         var data = $(this).html();
         $('#options').html(data);
     });
-    $(document).click(function(){
-        $("#jq-options").hide();
-        $('.custom-select-jq').removeClass('select-half');
+
+    const $dropdown = $('.custom-select-jq');
+
+    $(document).mouseup(function (e) {
+        if (!$dropdown.is(e.target) && $dropdown.has(e.target).length === 0) {
+            $dropdown.removeClass('select-half');
+            $dropdown.find('#jq-options').addClass('select-hide');
+        }
     });
-      
     
 });
